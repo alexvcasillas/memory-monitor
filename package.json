@@ -1,0 +1,33 @@
+{
+  "name": "@alexvcasillas/memory-monitor",
+  "version": "1.0.0",
+  "description": "A library for monitoring memory usage in Node.js",
+  "author": "Alex Casillas <alexvcasillas@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexvcasillas/memory-monitor"
+  },
+  "keywords": [
+    "memory",
+    "monitor",
+    "memory-monitor",
+    "memory-usage",
+    "memory-usage-monitor"
+  ],
+  "type": "module",
+  "module": "index.ts",
+  "types": "types.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun build index.ts --outdir dist --minify --sourcemap=linked"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
