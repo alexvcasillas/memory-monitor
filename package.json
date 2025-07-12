@@ -22,7 +22,13 @@
     "dist"
   ],
   "scripts": {
-    "build": "bun build index.ts --outdir dist --minify --sourcemap=linked"
+    "build": "bun build index.ts --outdir dist --minify --sourcemap=linked",
+    "publish:patch": "bun build index.ts --outdir dist --minify --sourcemap=linked && bun publish --tag patch",
+    "publish:minor": "bun build index.ts --outdir dist --minify --sourcemap=linked && bun publish --tag minor",
+    "publish:major": "bun build index.ts --outdir dist --minify --sourcemap=linked && bun publish --tag major"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
     "@types/bun": "latest"
